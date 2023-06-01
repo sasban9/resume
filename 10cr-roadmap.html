@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROADMAP</title>
+</head>
+
+<body>
+  <h3 style="text-align: center; color:teal;">PATH TO FINANCIAL FREEDOM</h3>
+  <div class="container"></div>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      min-width: 600px;
+      margin: 0 auto;
+    }
+
+    tr:nth-of-type(15),
+    tr:nth-of-type(25),
+    tr:nth-of-type(35) {
+      background-color: teal;
+      color: #fff;
+    }
+
+    th {
+      color: teal
+    }
+
+    td, th {
+      padding: .2em .8em;
+      border: 1px solid #bbb;
+      text-align: right;
+    }
+  </style>
+  <script>
+
+    let start = document.querySelector('div');
+    let table = document.createElement('table');
+    table.insertAdjacentHTML('beforeend', '<th>Age</th><th>Take Home</th><th>Income<br>ANNUAL</th><th>Expenses <br>ANNUAL</th><th>Runway<br>LAKHS</th><th>Portfolio<br>LAKHS</th>')
+    let age = 26;
+    let runway = 0;
+    let portfolio = 0;
+    const EXPENSE_MONTHS = 9
+
+    while (age <= 60) {
+      let row = document.createElement('tr');
+      let td = document.createElement('td');
+      td.innerHTML = age;
+      row.appendChild(td);
+      takehome = ((age - 26) * .08 + 0.3);
+      runway += takehome
+      portfolio = portfolio * 1.135 + takehome * (11 - EXPENSE_MONTHS)
+
+      row.insertAdjacentHTML('beforeend', '<td>' + takehome.toFixed(2) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * 12).toFixed(2) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * EXPENSE_MONTHS).toFixed(2) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (runway).toFixed(2) + ' (' + (runway / takehome).toFixed(2) + ' mes)</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + portfolio.toFixed(2) + '</td>');
+
+      // date.setDate( date.getDate() + 1) ;  
+      table.appendChild(row) //want that it add new row after each 7 days
+      // row = document.createElement('tr'); 
+      age++;
+    }
+
+    // table.appendChild(row)
+    start.appendChild(table)
+
+  </script>
+</body>
+
+</html>
