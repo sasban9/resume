@@ -25,16 +25,12 @@
       margin: 0 auto;
     }
 
-    tr:nth-of-type(15),
-    tr:nth-of-type(25),
-    tr:nth-of-type(35) {
+    tr:nth-of-type(10n+5){
       background-color: teal;
       color: #fff;
     }
 
-    tr:nth-of-type(10),
-    tr:nth-of-type(20),
-    tr:nth-of-type(30) {
+    tr:nth-of-type(10n) {
       background-color: yellow;
     }
 
@@ -51,11 +47,11 @@
   </style>
   <script>
     const EXPENSE_MONTHS = 7.5
-    const SAVINGS_MONTHS = 11 - EXPENSE_MONTHS
     const LIQUIDITY_MONTHS = 1
+    const SAVINGS_MONTHS = 12 - EXPENSE_MONTHS - LIQUIDITY_MONTHS
     const DECIMAL_DIGITS = 2
-    const CAREER_START = 26
-    const CAREER_END = 60
+    const CAREER_START = 16
+    const CAREER_END = 45
     const STARTING_SALARY = 0.3
     const SALARY_INCREMENT = 0.12
     const CAGR = 1.11
