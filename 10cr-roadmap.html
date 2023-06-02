@@ -10,12 +10,18 @@
 
 <body>
   <h3 style="text-align: center; color:teal;">PATH TO FINANCIAL FREEDOM</h3>
+
+  <h4>Increment 0.96L per year &middot; ROI 13.5% &middot; FD 1 month salary &middot; Expense Ratio 7.5/12</h4>
   <div class="container"></div>
   <style>
+    body {
+      text-align: center;
+    }
+
     table {
       border-collapse: collapse;
-      width: 50%;
-      min-width: 600px;
+      width: 90%;
+      min-width: 720px;
       margin: 0 auto;
     }
 
@@ -44,29 +50,41 @@
     }
   </style>
   <script>
+    const EXPENSE_MONTHS = 7.5
+    const SAVINGS_MONTHS = 11 - EXPENSE_MONTHS
+    const LIQUIDITY_MONTHS = 1
+    const DECIMAL_DIGITS = 2
+    const CAREER_START = 26
+    const CAREER_END = 60
+    const STARTING_SALARY = 0.3
+    const SALARY_INCREMENT = 0.12
+    const CAGR = 1.11
 
     let start = document.querySelector('div');
     let table = document.createElement('table');
-    table.insertAdjacentHTML('beforeend', '<th>Age</th><th>Take Home</th><th>Income<br>ANNUAL</th><th>Expenses <br>ANNUAL</th><th>Runway<br>LAKHS</th><th>Portfolio<br>LAKHS</th>')
-    let age = 26;
+    table.insertAdjacentHTML('beforeend', '<th>Age</th><th>Take Home</th><th>Income<br>ANNUAL</th><th>Expenses <br>ANNUAL</th><th>Debt&FD<br>LAKHS</th><th>Equity+MF<br>LAKHS</th><th>Savings<br>CUMULATIVE</th><th>Growth<br>LAKHS</th>')
+    let age = CAREER_START;
     let runway = 0;
     let portfolio = 0;
-    const EXPENSE_MONTHS = 9
+    let income_cumulative = 0
 
-    while (age <= 60) {
+    while (age <= CAREER_END) {
       let row = document.createElement('tr');
       let td = document.createElement('td');
       td.innerHTML = age;
       row.appendChild(td);
-      takehome = ((age - 26) * .08 + 0.3);
+      takehome = ((age - CAREER_START) * SALARY_INCREMENT + STARTING_SALARY);
       runway += takehome
-      portfolio = portfolio * 1.135 + takehome * (11 - EXPENSE_MONTHS)
+      portfolio = portfolio * CAGR + takehome * SAVINGS_MONTHS
+      income_cumulative += takehome * 12
 
-      row.insertAdjacentHTML('beforeend', '<td>' + takehome.toFixed(2) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * 12).toFixed(2) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * EXPENSE_MONTHS).toFixed(2) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (runway).toFixed(2) + ' (' + (runway / takehome).toFixed(2) + ' mes)</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + portfolio.toFixed(2) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + takehome.toFixed(DECIMAL_DIGITS) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * 12).toFixed(DECIMAL_DIGITS) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (runway).toFixed(DECIMAL_DIGITS) + ' (' + (runway / takehome * 12 / EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + ' mes)</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + portfolio.toFixed(DECIMAL_DIGITS) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
+      row.insertAdjacentHTML('beforeend', '<td>' + (portfolio - income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
 
       // date.setDate( date.getDate() + 1) ;  
       table.appendChild(row) //want that it add new row after each 7 days
