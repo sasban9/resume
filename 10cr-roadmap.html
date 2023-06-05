@@ -11,11 +11,39 @@
 <body>
   <h3 style="text-align: center; color:teal;">PATH TO FINANCIAL FREEDOM</h3>
 
-  <h4>Increment 0.96L per year &middot; ROI 13.5% &middot; FD 1 month salary &middot; Expense Ratio 7.5/12</h4>
+  <h4 style="display:flex; flex-direction: row;justify-content: space-evenly;">
+    <span>Increment per year <select id="select-increment" onchange="init()">
+        <option value="0.96" selected>0.96L</option>
+        <option value="1.2">1.2L</option>
+        <option value="1.8">1.8L</option>
+        <option value="2.4">2.4L</option>
+      </select></span> 
+    <span>ROI <select id="select-roi" onchange="init()">
+        <option value="1.045">4.5%</option>
+        <option value="1.09">9.0%</option>
+        <option value="1.135">13.5%</option>
+      </select> </span> 
+    <span>FD <select>
+        <option>1 month salary</option>
+        <option>2 months salary</option>
+        <option>3 months salary</option>
+      </select></span> 
+    <span>Expense Ratio <select id="select-exp-ratio" onchange="init()">
+        <option>7.5</option>
+        <option>7</option>
+        <option>6.5</option>
+        <option>6</option>
+      </select>/12</span>
+  </h4>
   <div class="container"></div>
   <style>
     body {
       text-align: center;
+    }
+
+    .container {
+      max-width: 100%;
+      overflow: scroll;
     }
 
     table {
@@ -25,7 +53,7 @@
       margin: 0 auto;
     }
 
-    tr:nth-of-type(10n+5){
+    tr:nth-of-type(10n+5) {
       background-color: teal;
       color: #fff;
     }
@@ -46,50 +74,56 @@
     }
   </style>
   <script>
-    const EXPENSE_MONTHS = 7.5
-    const LIQUIDITY_MONTHS = 1
-    const SAVINGS_MONTHS = 12 - EXPENSE_MONTHS - LIQUIDITY_MONTHS
-    const DECIMAL_DIGITS = 2
-    const CAREER_START = 16
-    const CAREER_END = 45
-    const STARTING_SALARY = 0.3
-    const SALARY_INCREMENT = 0.12
-    const CAGR = 1.11
+    function init() {
+      let EXPENSE_MONTHS = document.getElementById('select-exp-ratio').value
+      const LIQUIDITY_MONTHS = 1
+      const SAVINGS_MONTHS = 12 - EXPENSE_MONTHS - LIQUIDITY_MONTHS
+      const DECIMAL_DIGITS = 2
+      const CAREER_START = 26
+      const CAREER_END = 60
+      const STARTING_SALARY = 0.3
+      let SALARY_INCREMENT = document.getElementById('select-increment').value/12;
+      // console.log(SALARY_INCREMENT)
+      let CAGR = document.getElementById('select-roi').value;
 
-    let start = document.querySelector('div');
-    let table = document.createElement('table');
-    table.insertAdjacentHTML('beforeend', '<th>Age</th><th>Take Home</th><th>Income<br>ANNUAL</th><th>Expenses <br>ANNUAL</th><th>Debt&FD<br>LAKHS</th><th>Equity+MF<br>LAKHS</th><th>Savings<br>CUMULATIVE</th><th>Growth<br>LAKHS</th>')
-    let age = CAREER_START;
-    let runway = 0;
-    let portfolio = 0;
-    let income_cumulative = 0
+      let start = document.querySelector('div');
+      start.innerHTML = "";
+      let table = document.createElement('table');
+      table.insertAdjacentHTML('beforeend', '<th>Age</th><th>Take Home</th><th>Income<br>ANNUAL</th><th>Expenses <br>ANNUAL</th><th>Debt&FD<br>LAKHS</th><th>Equity+MF<br>LAKHS</th><th>Savings<br>CUMULATIVE</th><th>Growth<br>LAKHS</th>')
+      let age = CAREER_START;
+      let runway = 0;
+      let portfolio = 0;
+      let income_cumulative = 0
 
-    while (age <= CAREER_END) {
-      let row = document.createElement('tr');
-      let td = document.createElement('td');
-      td.innerHTML = age;
-      row.appendChild(td);
-      takehome = ((age - CAREER_START) * SALARY_INCREMENT + STARTING_SALARY);
-      runway += takehome
-      portfolio = portfolio * CAGR + takehome * SAVINGS_MONTHS
-      income_cumulative += takehome * 12
+      while (age <= CAREER_END) {
+        let row = document.createElement('tr');
+        let td = document.createElement('td');
+        td.innerHTML = age;
+        row.appendChild(td);
+        takehome = ((age - CAREER_START) * SALARY_INCREMENT + STARTING_SALARY);
+        runway += takehome
+        portfolio = portfolio * CAGR + takehome * SAVINGS_MONTHS
+        income_cumulative += takehome * 12
 
-      row.insertAdjacentHTML('beforeend', '<td>' + takehome.toFixed(DECIMAL_DIGITS) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * 12).toFixed(DECIMAL_DIGITS) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (takehome * EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (runway).toFixed(DECIMAL_DIGITS) + ' (' + (runway / takehome * 12 / EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + ' mes)</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + portfolio.toFixed(DECIMAL_DIGITS) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
-      row.insertAdjacentHTML('beforeend', '<td>' + (portfolio - income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + takehome.toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + (takehome * 12).toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + (takehome * EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + (runway).toFixed(DECIMAL_DIGITS) + ' (' + (runway / takehome * 12 / EXPENSE_MONTHS).toFixed(DECIMAL_DIGITS) + ' mes)</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + portfolio.toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + (income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
+        row.insertAdjacentHTML('beforeend', '<td>' + (portfolio - income_cumulative * (SAVINGS_MONTHS) / 12).toFixed(DECIMAL_DIGITS) + '</td>');
 
-      // date.setDate( date.getDate() + 1) ;  
-      table.appendChild(row) //want that it add new row after each 7 days
-      // row = document.createElement('tr'); 
-      age++;
+        // date.setDate( date.getDate() + 1) ;  
+        table.appendChild(row) //want that it add new row after each 7 days
+        // row = document.createElement('tr'); 
+        age++;
+      }
+
+      // table.appendChild(row)
+      start.appendChild(table)
     }
 
-    // table.appendChild(row)
-    start.appendChild(table)
+    init()
 
   </script>
 </body>
