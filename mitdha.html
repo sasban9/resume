@@ -7,12 +7,16 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
 <!-- <link rel="stylesheet" type="text/css" href="//sms.styched.in/includes/css/cosmo.bootstrap.min.css"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Updated Apr 2020">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style type="text/css">
 .table td,.table th{padding: 0.15rem; }
+@media print {
+  #training{page-break-after: always;}
+}
   </style>
 </head>
 <body>
@@ -81,7 +85,7 @@ students.<br>Technology: php, MySQL, apache, symphony, Ajax</td>
 			</table>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" id="training">
 		<div class="col-md-12">
 			<h4>Industrial Training</h4>
 			<table class="table">
@@ -100,14 +104,14 @@ students.<br>Technology: php, MySQL, apache, symphony, Ajax</td>
 			<table class="table">
 				<tr>
 					<td colspan="2" width="50%"><b>1. Entity Relation Drawing Software (Database project/C#, jsp)</b></td>
-					<td colspan="2" class="border-left"><b>2. C Compiler (C/lex/yacc)</b></td>
+					<td>Description</td><td>ERDraw allows database design and schema generation from ER diagram. ERDraw supports all features of Extended Entity Relation Diagrams and supports incremental design on MSSQL2000 database.</td>
 				</tr>
 				<tr>
 					<td>Guide</td><td> Prof. A. K. Majumder & Prof I Sengupta, CSE, IIT Kharagpur</td>
+					<td colspan="2" class="border-left"><b>2. C Compiler (C/lex/yacc)</b></td>
 					<td class="border-left">Guide</td><td>Prof. Rajeev Kumar, CSE, IIT Kharagpur</td>
 				</tr>
 				<tr>
-					<td>Description</td><td>ERDraw allows database design and schema generation from ER diagram. ERDraw supports all features of Extended Entity Relation Diagrams and supports incremental design on MSSQL2000 database.</td>
 					<td class="border-left">Description</td><td>Coding a C Compiler using C compiler tools Flex and YACC for DEC-ALPHA machine.</td>
 				</tr>
 				<tr>
@@ -130,13 +134,13 @@ students.<br>Technology: php, MySQL, apache, symphony, Ajax</td>
 					<th>DEGREE</th><th>INSTITUTE</th><th>DURATION</th><th>PERFORMANCE</th>
 				</tr>
 				<tr>
-					<td>5Y Integrated BTech & MTech in CSE</td><td>Department of Computer Science & Engineering, IIT Kharagpur</td><td>2002-2007</td><td>8.00 of 10.00 </td>
+					<td>5Y Integrated BTech & MTech in CSE</td><td>Department of Computer Science & Engineering,<br>IIT Kharagpur</td><td>2002-2007</td><td>8.00 of 10.00 </td>
 				</tr>
 				<tr>
-					<td>High School</td><td>Bhavan’s GangaBux Kanoria Vidyamandir, Kolkata, India</td><td>2000-2002</td><td>80.2% in AISSCE, Science</td>
+					<td>High School</td><td>Bhavan’s GangaBux Kanoria Vidyamandir,<br>Kolkata, India</td><td>2000-2002</td><td>80.2% in AISSCE, Science</td>
 				</tr>
 				<tr>
-					<td>School</td><td>Indira Gandhi Memorial High School, Kolkata, India</td><td>-2000</td><td>79.0% In AISSE</td>
+					<td>School</td><td>Indira Gandhi Memorial High School,<br>Kolkata, India</td><td>-2000</td><td>79.0% In AISSE</td>
 				</tr>
 			</table>
 		</div>
