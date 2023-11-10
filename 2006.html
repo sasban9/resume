@@ -13,12 +13,17 @@
         th{background: lightgray;}
         .container{max-width: 1080px;margin: 0 auto;}
         /* .page-break{page-break-after: always;} */
+        @media print {
+            .p-none {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
 
-<table>
+<table class="p-none">
     <tr>
         <td width="30%"></td>
         <td style="text-align: center;"><a href="https://resume.sasban.online/">latest</a></td>
