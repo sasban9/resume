@@ -72,4 +72,7 @@ Here are **50 engaging workbook topics** on **Self-Esteem & Identity** for teens
 
 ---
 
-Would you like these turned into printable worksheet templates with activities, journal prompts, or visual trackers for each?
+weekly update 5/10 - 1 product
+any 50set 5/10 - 10+8 products
+skills 400set 20/40 - 1 product
+wellness 500set 25/50 - 1 product
