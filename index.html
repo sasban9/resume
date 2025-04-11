@@ -9,7 +9,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: math, cursive, sans-serif;
     }
     
     body {
@@ -77,15 +77,15 @@
     }
     
     .image-gallery {
+      max-width: 600px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin: 40px 0;
+      gap: 40px 20px;
+      margin: 0 auto;
     }
 
     @media(max-width:640px) {
         .image-gallery {
-            display: blockgrid;
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -104,7 +104,7 @@
     
     .image-container img {
       width: 100%;
-      height: 600px;
+      height: 400px;
       object-fit: cover;
     }
     
@@ -193,19 +193,19 @@
     <!-- GALLERY ROW 1 -->
     <div class="image-gallery">
       <div class="image-container">
-        <img src="/img/img01.jpg" alt="Mom and son at first book signing">
+        <img src="/img/img01.gif" alt="Mom and son at first book signing">
         <div class="image-caption">Our first book signing (note the terror in our eyes)</div>
       </div>
       <div class="image-container">
-        <img src="/img/img02.jpg" alt="Workbook creation chaos">
+        <img src="/img/img15.jpg" alt="Workbook creation chaos">
         <div class="image-caption">The reality of workbook creation (3AM edition)</div>
       </div>
       <div class="image-container">
-        <img src="/img/img03.jpg" alt="Mom's psychology graduation">
+        <img src="/img/img12.jpg" alt="Mom's psychology graduation">
         <div class="image-caption">Mom's graduation (Son thought it was HIS graduation)</div>
       </div>
       <div class="image-container">
-        <img src="/img/img04.jpg" alt="Son's art studio">
+        <img src="/img/img17.jpg" alt="Son's art studio">
         <div class="image-caption">Son's "art studio" (aka the kitchen table)</div>
       </div>
     </div>
@@ -221,12 +221,12 @@
     <!-- GALLERY ROW 2 -->
     <div class="image-gallery">
       <div class="image-container">
-        <img src="/img/img05.jpg" alt="Mom giving a workshop">
-        <div class="image-caption">Mom explaining anxiety to kindergarteners using puppets</div>
-      </div>
-      <div class="image-container">
         <img src="/img/img06.jpg" alt="Mom's home office">
         <div class="image-caption">Mom's "office" (50% research papers, 50% snack wrappers)</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img13.jpg" alt="Mom giving a workshop">
+        <div class="image-caption">Mom explaining anxiety to kindergarteners using puppets</div>
       </div>
     </div>
     
@@ -241,11 +241,11 @@
     <!-- GALLERY ROW 3 -->
     <div class="image-gallery">
       <div class="image-container">
-        <img src="/img/img07.jpg" alt="Son illustrating">
+        <img src="/img/img18.jpeg" alt="Son illustrating">
         <div class="image-caption">Son illustrating our "Worry Warriors" workbook</div>
       </div>
       <div class="image-container">
-        <img src="/img/img08.jpeg" alt="Son's desk">
+        <img src="/img/img16.jpg" alt="Son's desk">
         <div class="image-caption">Son's design station (organized chaos is still organization)</div>
       </div>
     </div>
@@ -261,12 +261,12 @@
     <!-- GALLERY ROW 4 -->
     <div class="image-gallery">
       <div class="image-container">
-        <img src="/img/img09.jpg" alt="Book donation event">
-        <div class="image-caption">Workbook donation day at Children's Hospital</div>
-      </div>
-      <div class="image-container">
         <img src="/img/img10.jpg" alt="Family using workbook">
         <div class="image-caption">A family putting our exercises into practice</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img14.jpg" alt="Book donation event">
+        <div class="image-caption">Workbook donation day at Children's Hospital</div>
       </div>
     </div>
     
