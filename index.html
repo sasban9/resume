@@ -1,158 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Sas Ban :: Resume</title>
-    <link rel="shortcut icon" href="https://sasban.online/sasban.jpg" />
-    <link rel="apple-touch-icon" href="https://sasban.online/sasban.jpg" />
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
-<link rel="stylesheet" type="text/css" href="https://sms.styched.in/includes/css/cosmo.bootstrap.min.css">
-    <meta name="description" content="Updated Apr 2023">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:title" content="Sas Ban :: Resume" />
-    <meta property="og:description" content="To pursue an opportunity in an organization to utilize my abilites to enhance my skills to lead the organization to move forward. " />
-    <meta property="og:image" content="https://sasban.online/sasban.jpg" />
-    <meta property="og:image:width" content="480" />
-    <meta property="og:image:height" content="480" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet The Brain & Heart Behind Mindful Munchkins</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    
+    body {
+      background-color: #f9f3e5;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #ffd56b;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      font-size: 3em;
+      color: #7678ed;
+      text-shadow: 2px 2px 0 #fff;
+    }
+    
+    h2 {
+      font-size: 2.2em;
+      color: #ff5e78;
+      margin-bottom: 15px;
+    }
+    
+    .subtitle {
+      font-size: 1.4em;
+      color: #7678ed;
+      margin-bottom: 20px;
+    }
+    
+    .intro {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #ffe8d6;
+      border-radius: 15px;
+      box-shadow: 5px 5px 0 #ffd56b;
+    }
+    
+    .content-block {
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      box-shadow: 7px 7px 0 #7678ed;
+    }
+    
+    .content-block:nth-child(odd) {
+      background-color: #ffe8d6;
+    }
+    
+    .content-block:nth-child(even) {
+      background-color: #c8e7ff;
+    }
+    
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style type="text/css">
-.table td,.table th{padding: 0.15rem 1rem; }
-h2,h4,b{color: indigo;}
-/* div{opacity: 0.5;}
-div:hover{opacity: 1;} */
-img.passport{height: 160px;border-radius: 100%;float: right;margin: 1rem;border: solid 4px cornsilk;}
-@media print {
-  #training{page-break-after: always;}
-}
+    @media(max-width:640px) {
+        .image-gallery {
+            display: blockgrid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+    .image-container {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 5px 5px 0 #ff5e78;
+      transition: transform 0.3s ease;
+    }
+    
+    .image-container:hover {
+      transform: rotate(3deg);
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(255, 213, 107, 0.8);
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffd56b;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+    
+    .speech-bubble {
+      position: relative;
+      background: #7678ed;
+      color: white;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 80%;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    
+    .speech-bubble:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: #7678ed transparent;
+    }
+    
+    .highlight {
+      background-color: #ffeb3b;
+      padding: 3px 5px;
+      border-radius: 5px;
+    }
+    
+    .wiggle {
+      display: inline-block;
+      animation: wiggle 2s infinite;
+    }
+    
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0); }
+      25% { transform: rotate(5deg); }
+      75% { transform: rotate(-5deg); }
+    }
   </style>
-
-  <!-- <style>
-	body{background: #333;color: white;}
-	td{color: white;}
-	th,h1,h2,h4,b{color: burlywood;}
-  </style> -->
 </head>
 <body>
-
-	<a href="https://sasban.online" title="'Coffee!"><img src="https://sasban.online/sasban.jpg" alt="" style="position:fixed;height:100px;bottom:20px;right:20px;z-index: 99999;"></a>
-
-
-			
-
-<div class="container">
-	<div class="row">
-		<header>
-			<a href="https://resume.sasban.online/2006">2006</a> | 
-			<a href="https://resume.sasban.online/2007">2007</a> | 
-			<a href="https://resume.sasban.online/2010">2010</a> | 
-			<a href="https://resume.sasban.online/2012">2012</a> | 
-			<a href="https://resume.sasban.online/2014">2014</a> | 
-			<a href="https://resume.sasban.online/2016">2016</a> | 
-			<a href="https://resume.sasban.online/2018">2018</a> | 
-			<a href="https://resume.sasban.online/2020">2020</a>
-		</header>
-		<div class="col-12 text-white" style="background: steelblue;">
-			<img src="https://sasban.online/sasban.jpg" class="passport" alt="">
-			<h1 class="mt-4">Sas Ban</h1>
-			<p>To pursue an opportunity in an organization to utilize my abilites to enhance my skills to lead the organization to move forward. I have managed end-to-end software development for three startups. I have worked on scalable java services, C#.net application, apache-php-MySQL, ios dev, apache-pythonDjango-MySQL, html-Ajax-css-backbone-underscore etc. </p>
-
-		</div>
-	</div>
-	<div class="row bg-dark text-white p-4">
-		<div class="col-md-6">
-			<i class="fa fa-mobile"></i> 9876543210 <br>
-			<i class="fa fa-envelope"></i> sasban@gmail.com 	<br>	
-			<i class="fa fa-map-marker"></i> Bangalore, India
-		</div>
-		<div class="col-md-6">
-			<i class="fa fa-github"></i>  sasban.online/github <br>
-			<i class="fa fa-linkedin"></i>  sasban.online/linkedin
-		</div>
-	</div>
-	<div class="row mt-4">
-		<div class="col-md-6">
-			<h4>EDUCATION</h4>
-			<div>
-				<h4 style="float: right;">8.24</h4>
-			<p><b>Master of Computer Application</b><br>
-				Kalinga Institute of Industrial Technology <br>
-				<small>10/2022 - Present, Bhubhaneswar</small>
-			</p>
-		</div>
-			<h4 style="float: right;">7.96</h4>
-			<p><b>Bachelor's of Computer Application</b><br>
-				The Heritage Academy <br>
-				<small>07/2019 - 07/2022, Kolkata</small>
-			</p>
-			
-			<h4 style="float: right;">84%</h4>
-	
-			<p>
-				<b>CBSE Class 12</b><br>
-				Amrita Vidyalayam <br>
-				<small>03/2018 - 02/2019, Kolkata</small>
-			</p>
-			<h4 style="float: right;">88%</h4>
-
-			<p><b>CBSE Class 10</b><br>
-				Amrita Vidyalayam <br>
-				<small>03/2016 - 03/2017, Kolkata</small>
-			</p>
-
-			<hr>
-			<h4>PROJECTS</h4>
-<b>Online Grocery Management System website</b>
-(10/2021 - 11/2021) <br>
-This project is made by using PHP, HTML, CSS, Javascript, JQuery, Ajax, MVC Architecture, Codegineter and SQL <br>
-<b>Gaming Website</b> (12/2021 - 01/2022) <br>
-This project was assigned by my college during Bachelor's. This was a minor project made using PHP, HTML,CSS , Javascript and SQL. <br>
-<b>Library Management System</b> (05/2022 - 06/2022) <br>
-This project was assigned by my college during Bachelor's. This was a major project made using PHP, HTML,CSS , Javascript and SQL. <br>
-<b>Movie Ticket Booking System</b> (06/2023 - 06/2023) <br>
-This project was made by me during my Master's. This project is made using PHP, HTML,CSS , Javascript and SQL.
-
-<hr>
-<h4>INTERNSHIP</h4>
-<b>Data Analytics Virtual Internship</b><br>
-AWS Academy <br>
-<i>05/2023 - 07/2023</i>
-<hr>
-		</div>
-		<div class="col-md-6">
-			<h4>SKILLS</h4>
-Web Technology : <span class="badge badge-secondary">HTML</span> <span class="badge badge-info">CSS</span> <span class="badge badge-success">JavaScript</span> <span class="badge badge-warning">jQuery</span><br> 
-Database: <span class="badge badge-info">Oracle</span> <span class="badge badge-secondary">SQL</span><br>
-Programming Language: <span class="badge badge-danger">PHP</span> <span class="badge badge-secondary">C</span> <span class="badge badge-warning">Java</span> <span class="badge badge-dark">Python</span>
-<br><br>
-<span class="badge badge-secondary">Problem-solving skills</span> <span class="badge badge-secondary">Teamwork skills</span> <span class="badge badge-secondary">Time-Management</span>  
-			<hr>
-			<h4>CERTIFICATES</h4>
-			
-<p><b>PHP Backend Development (06/2021 - 11/2021)</b><br>
-<i>I have completed the “PHP Web Development” training program of duration 140hrs (4 months) at Ejobindia, and have gained industry
-standard hands-on experience on PHP by executing various case studies and a project work (Online Grocery Management System).</i></p>
-<p><b>Introduction to Data Analytics by IBM(Coursera) (04/2023 - 05/2023)</b><br>
-<i>This course presented with a gentle introduction to Data Analysis, the role of a Data Analyst, and the tools used in this job.</i></p>
-			<hr>
-			<h4>LANGUAGES</h4>
-<b>English</b> <br>
-Full Professional Proficiency <br>
-<b>Hindi</b> <br>
-Full Professional Proficiency <br>
-<b>Bengali</b> <br>
-Professional Working Proficiency <br>
-
-<hr>
-<h4>INTEREST</h4>
-<span class="badge badge-light">Music Lover</span> <span class="badge badge-light">Movies Watcher</span> <span class="badge badge-light">Cricket Fanatic</span> 
-<hr>
-		</div>
-	</div>
-</div>
-<footer style="height: 200px;"></footer>
-
+  <div class="container">
+    <header>
+      <h1>The <span class="wiggle">Dynamic Duo</span> Behind</h1>
+      <h2>Mindful Munchkins Workbooks</h2>
+      <p class="subtitle">Where Mom Wisdom Meets Son Silliness!</p>
+    </header>
+    
+    <div class="intro">
+      <p>Welcome to our wacky world of wellness workbooks! We're the mother-son team who figured out that the best way to help kids with mental health is to make it <span class="highlight">actually fun</span>. (Revolutionary concept, we know! 🤯)</p>
+      <div class="speech-bubble">
+        "We're like the Batman and Robin of kids' mental health... except with more snack breaks and occasional disagreements about font choices."
+      </div>
+    </div>
+    
+    <!-- CONTENT BLOCK 1 -->
+    <div class="content-block">
+      <h2>Our Origin Story</h2>
+      <p>Once upon a time (actually, during a particularly chaotic breakfast in 2019), a frazzled mom with a psychology degree and her creative son with too many colored pencils had a simultaneous "AHA!" moment over spilled cereal. What if they combined Mom's mental health expertise with Son's ability to make anything into a game that kids actually want to play?</p>
+      <p>After three prototype workbooks, seventeen coffee stains, and one memorable incident involving a printer and a jelly sandwich, Mindful Munchkins was born!</p>
+      <p>Our first workbook sold exactly seven copies (all to relatives who felt obligated). But then something magical happened—kids started asking to do their "fun homework" first. Parents began sending us photos of peaceful bedtimes and fewer meltdowns. And here we are, 47 workbooks later, still arguing about whether dragons or dinosaurs make better mindfulness guides. (Spoiler: it's obviously dragons.)</p>
+    </div>
+    
+    <!-- GALLERY ROW 1 -->
+    <div class="image-gallery">
+      <div class="image-container">
+        <img src="/img/img01.jpg" alt="Mom and son at first book signing">
+        <div class="image-caption">Our first book signing (note the terror in our eyes)</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img02.jpg" alt="Workbook creation chaos">
+        <div class="image-caption">The reality of workbook creation (3AM edition)</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img03.jpg" alt="Mom's psychology graduation">
+        <div class="image-caption">Mom's graduation (Son thought it was HIS graduation)</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img04.jpg" alt="Son's art studio">
+        <div class="image-caption">Son's "art studio" (aka the kitchen table)</div>
+      </div>
+    </div>
+    
+    <!-- CONTENT BLOCK 2 -->
+    <div class="content-block">
+      <h2>Meet Mom (The Brains)</h2>
+      <p>With a master's in child psychology and the uncanny ability to find missing socks, Mom is our resident expert on what makes little minds tick. Before Mindful Munchkins, she spent 12 years working with children in clinical settings, where she discovered that worksheets don't have to be boring, and that stickers are basically therapy gold.</p>
+      <p>Mom can explain complex emotional concepts to 5-year-olds, remember everyone's food allergies, and somehow always knows when you haven't flossed. Her superpower is turning psychological research into activities so fun kids don't realize they're building life skills.</p>
+      <p>Fun fact: She once accidentally used her "therapist voice" at a car dealership and talked the salesman into reconsidering his career choices.</p>
+    </div>
+    
+    <!-- GALLERY ROW 2 -->
+    <div class="image-gallery">
+      <div class="image-container">
+        <img src="/img/img05.jpg" alt="Mom giving a workshop">
+        <div class="image-caption">Mom explaining anxiety to kindergarteners using puppets</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img06.jpg" alt="Mom's home office">
+        <div class="image-caption">Mom's "office" (50% research papers, 50% snack wrappers)</div>
+      </div>
+    </div>
+    
+    <!-- CONTENT BLOCK 3 -->
+    <div class="content-block">
+      <h2>Meet Son (The Heart)</h2>
+      <p>Former kid (technically still one at heart) and creative mastermind, Son brings the "would an actual child do this?" perspective that keeps our workbooks from becoming boring adult exercises dressed in primary colors.</p>
+      <p>With a background in graphic design and a childhood spent as Mom's unofficial therapy practice guinea pig, he knows exactly which fonts make kids laugh and which activities will be met with eye rolls. He's also our social media guru, because Mom still thinks TikTok is a breath mint.</p>
+      <p>Fun fact: He can draw a perfectly symmetrical heart in under 3 seconds and has an encyclopedic knowledge of cereal mascots throughout history.</p>
+    </div>
+    
+    <!-- GALLERY ROW 3 -->
+    <div class="image-gallery">
+      <div class="image-container">
+        <img src="/img/img07.jpg" alt="Son illustrating">
+        <div class="image-caption">Son illustrating our "Worry Warriors" workbook</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img08.jpeg" alt="Son's desk">
+        <div class="image-caption">Son's design station (organized chaos is still organization)</div>
+      </div>
+    </div>
+    
+    <!-- CONTENT BLOCK 4 -->
+    <div class="content-block">
+      <h2>Our Philosophy (No, Really, We Have One)</h2>
+      <p>We believe that mental health tools for kids should be as colorful and engaging as their favorite games. That skills like emotional regulation, mindfulness, and resilience can be taught through stories, characters, and activities that kids actually enjoy.</p>
+      <p>Each workbook is field-tested by our "Brutally Honest Panel" (neighborhood kids who have no problem telling us when something is "totally lame"). We promise to never use the phrase "just calm down" in any of our materials, and to always include at least one activity involving either slime or ice cream metaphors.</p>
+      <p>Most importantly, we believe that mental wellness should be accessible to all families, which is why we donate a workbook to children's hospitals and community centers for every 10 books sold. Because everyone deserves tools that help them understand the magnificent, sometimes messy landscape of their emotions.</p>
+    </div>
+    
+    <!-- GALLERY ROW 4 -->
+    <div class="image-gallery">
+      <div class="image-container">
+        <img src="/img/img09.jpg" alt="Book donation event">
+        <div class="image-caption">Workbook donation day at Children's Hospital</div>
+      </div>
+      <div class="image-container">
+        <img src="/img/img10.jpg" alt="Family using workbook">
+        <div class="image-caption">A family putting our exercises into practice</div>
+      </div>
+    </div>
+    
+    <footer>
+      <h3>Get In Touch With The Dynamic Duo</h3>
+      <p>Email: hello@mindfulmunchkins.com | Instagram: @MindfulMunchkinsBooks</p>
+      <p>P.S. We're always looking for kid testers who aren't afraid to tell us when our jokes aren't funny!</p>
+    </footer>
+  </div>
 </body>
 </html>
